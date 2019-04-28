@@ -49,6 +49,7 @@
             </div>
         </div>
         <div id="cardView">
+            <div id="emptyView">No poems here!</div>
         </div>
         <div id="createView">
             <div id="poemCreator">
@@ -68,13 +69,14 @@
             </div>
 
             <div id="finalizePoem">
-                <div id="poem">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                </div>
+                <div id="poem"></div>
                 <div id="selectTitle">Choose your title!</div>
                 <input spellcheck="false" type="text" id="titleInput">
                 <div id="submitButton" onclick="submitPoem()">SUBMIT</div>
             </div>
+        </div>
+        <div id="cancelCreateTrigger" onclick="closeCreate()">
+            <div id="cancelCreateButton">X</div>
         </div>
     </body>
 </html>

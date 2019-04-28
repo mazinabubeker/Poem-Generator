@@ -26,11 +26,10 @@ var months = [
 ];
 
 function start(){
-    $(".wordInput").keypress(function(e) {
+    $(document).on('keypress',function(e) {
         if(e.which == 13) {
-            console.log("hey");
+            nextClick();
         }
-        console.log("hey");
     });
 }
 
@@ -61,29 +60,30 @@ function nextClick(){
         }, 250);
         
         if(stage == 0){
-            nouns.push($("#data1").val());
-            nouns.push($("#data2").val());
-            nouns.push($("#data3").val());
+            console.log(typeof($("#data1").val()));
+            nouns.push($("#data1").val().toLowerCase());
+            nouns.push($("#data2").val().toLowerCase());
+            nouns.push($("#data3").val().toLowerCase());
             triggerNextInput("adjectives");
         }else if(stage == 1){
-            adjectives.push($("#data1").val());
-            adjectives.push($("#data2").val());
-            adjectives.push($("#data3").val());
+            adjectives.push($("#data1").val().toLowerCase());
+            adjectives.push($("#data2").val().toLowerCase());
+            adjectives.push($("#data3").val().toLowerCase());
             triggerNextInput("verbs");
         }else if(stage == 2){
-            verbs.push($("#data1").val());
-            verbs.push($("#data2").val());
-            verbs.push($("#data3").val());
+            verbs.push($("#data1").val().toLowerCase());
+            verbs.push($("#data2").val().toLowerCase());
+            verbs.push($("#data3").val().toLowerCase());
             triggerNextInput("adverbs");
         }else if(stage == 3){
-            adverbs.push($("#data1").val());
-            adverbs.push($("#data2").val());
-            adverbs.push($("#data3").val());
+            adverbs.push($("#data1").val().toLowerCase());
+            adverbs.push($("#data2").val().toLowerCase());
+            adverbs.push($("#data3").val().toLowerCase());
             triggerNextInput("prepositions");
         }else if(stage == 4){
-            prepositions.push($("#data1").val());
-            prepositions.push($("#data2").val());
-            prepositions.push($("#data3").val());
+            prepositions.push($("#data1").val().toLowerCase());
+            prepositions.push($("#data2").val().toLowerCase());
+            prepositions.push($("#data3").val().toLowerCase());
             finishInput();
         }
         stage++;
@@ -109,9 +109,6 @@ function nextClick(){
                 'border-bottom-color': 'rgba(255, 0, 0, .6)'
             });
         }else{
-//            $("#data1").css({
-//                'border-bottom-color': 'rgba(0, 0, 0, .4)'
-//            });
             $("#data1").removeAttr('style');
         }
         
@@ -120,9 +117,6 @@ function nextClick(){
                 'border-bottom-color': 'rgba(255, 0, 0, .6)'
             });
         }else{
-//            $("#data2").css({
-//                'border-bottom-color': 'rgba(0, 0, 0, .4)'
-//            });
             $("#data2").removeAttr('style');
         }
         
@@ -131,9 +125,6 @@ function nextClick(){
                 'border-bottom-color': 'rgba(255, 0, 0, .6)'
             });
         }else{
-//            $("#data3").css({
-//                'border-bottom-color': 'rgba(0, 0, 0, .4)'
-//            });
             $("#data3").removeAttr('style');
         } 
     }
@@ -213,4 +204,8 @@ function submitPoem(){
     }, 100, function(){
         window.location.href="index.html";
     });
+}
+
+function closeCreate(){
+    window.location.href="index.html";
 }
