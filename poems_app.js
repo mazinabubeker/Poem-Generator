@@ -17,14 +17,10 @@ var months = [
 
 var cardComponent = `<div class="cardTrigger">
                         <div class="card">
-                            <div class="cardTitle">
-                            </div>
-                            <div class="cardDate">
-                            </div>
-                            <div class="cardContent">
-                                <div class="cardContentBlur">
-                                </div>
-                            </div>
+                            <div class="cardTitle"></div>
+                            <div class="cardDate"></div>
+                            <div class="cardContent"></div>
+                            <div class="cardContentBlur"></div>
                         </div>
                      </div>`;
 
