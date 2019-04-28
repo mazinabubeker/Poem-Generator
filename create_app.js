@@ -189,6 +189,10 @@ function finishInput(){
         
     });
     
+    $("#createView").css({
+        'overflow-y': 'scroll'
+    });
+    
     
 }
 
