@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GSVlabs Poetry</title>
+        <link rel="stylesheet" type="text/css" href="poems_style.css" />
+        
+        <!-- Import fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet">
+        
+        <!-- Import jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        
+        <!-- Import firebase javascript file -->
+        <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+        <script>
+            // Initialize configuration for Firebase realtime database
+            var config = {
+                apiKey: "AIzaSyBRbdO2-yYLRLeas0rEekLQSqEgvKo4lO0",
+                authDomain: "gsvlabs-mad-libs.firebaseapp.com",
+                databaseURL: "https://gsvlabs-mad-libs.firebaseio.com",
+                projectId: "gsvlabs-mad-libs",
+                storageBucket: "gsvlabs-mad-libs.appspot.com",
+                messagingSenderId: "421286409508"
+            };
+            firebase.initializeApp(config);
+        </script>
+        
+        <!-- Import application script -->
+        <script src="poems_app.js"></script>
+    </head>
+    <body>
+        <div id="controlView">
+            <div class="buttonTrigger" id="newPoemTrigger" onclick="newPoem()">
+                <div class="button" id="newPoem">NEW
+                </div>
+            </div>
+            <div class="buttonTrigger" id="deletePoemsTrigger" onclick="deletePoems()">
+                <div class="button" id="deletePoems">CLEAR
+                </div>
+            </div>
+            <div class="buttonTrigger" id="testPoemTrigger" onclick="testPoem()">
+                <div class="button" id="testPoem">TEST
+                </div>
+            </div>
+        </div>
+        <div id="cardView">
+        </div>
+    </body>
+</html>
