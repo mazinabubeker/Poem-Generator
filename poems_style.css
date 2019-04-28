@@ -78,6 +78,7 @@ body{
     margin: 10px 10px 10px 10px;
     padding: 0;
     transform: scale(1);
+    cursor: default;
 }
 
 .card{
@@ -188,6 +189,7 @@ body{
 .buttonTrigger{
     position: absolute;
     width: 80%;
+    cursor: pointer;
 }
 
 .button{
@@ -200,8 +202,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     animation: slideIn 0.7s ease-out;
+    overflow: hidden;
 }
 
 #newPoemTrigger{
@@ -244,6 +247,11 @@ body{
 
 .cardTrigger:hover .card{
     transform: scale(0.95);
+}
+
+.cardTrigger:active .card{
+    width = 500px;
+    height = 500px;
 }
 
 @keyframes popIn{
