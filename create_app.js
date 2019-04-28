@@ -26,7 +26,12 @@ var months = [
 ];
 
 function start(){
-    $("#poem").text("asdlkasdkjaslkdjlakdsklad");
+    $(".wordInput").keypress(function(e) {
+        if(e.which == 13) {
+            console.log("hey");
+        }
+        console.log("hey");
+    });
 }
 
 start();

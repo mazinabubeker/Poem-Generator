@@ -125,7 +125,7 @@ body{
     font-weight: 300;
     top: 20%;
     
-    animation: fadeIn 1s;
+    animation: fadeIn .5s;
 }
 
 #errorInstruction{
@@ -151,7 +151,7 @@ body{
     height: auto;
     top: 40%;
     
-    animation: fadeIn 1s;
+    animation: fadeIn .5s;
 }
 
 .wordInput{

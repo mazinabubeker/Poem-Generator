@@ -47,7 +47,24 @@ function pullCards(){
 }
 
 function newPoem(){
-    window.location.href="create.html";
+    
+    $("#controlView").css({
+        'filter': 'blur(10px)',
+        'pointer-events': 'none'
+    });
+    $("#cardView").css({
+        'filter': 'blur(10px)',
+        'pointer-events': 'none'
+    });
+    $("#createView").css({
+        'display': 'inline'
+    });
+    
+    $("#createView").animate({
+        'opacity': '1',
+        'transform': 'scale(1.2)'
+        
+    }, 200);
 }
 
 function deletePoems(){
@@ -79,6 +96,4 @@ function testPoem(){
     cur.children(".card").children(".cardTitle").text(testTitle);
     cur.children(".card").children(".cardDate").text(testDate);
     cur.children(".card").children(".cardContent").text(testPoem);
-    
-    
 }
