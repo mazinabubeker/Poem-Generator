@@ -206,6 +206,6 @@ function submitPoem(){
     $("#finalizePoem").animate({
         'opacity': '0'
     }, 100, function(){
-        window.location.href="poems.html";
+        window.location.href="index.html";
     });
 }
