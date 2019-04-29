@@ -31,6 +31,8 @@ function start(){
             nextClick();
         }
     });
+    
+    
 }
 
 start();
@@ -60,22 +62,29 @@ function nextClick(){
         }, 250);
         
         if(stage == 0){
-            console.log(typeof($("#data1").val()));
+            $("#pl1").addClass("previewAnimOut");
+            $("#pl2").addClass("previewAnimIn");
             nouns.push($("#data1").val().toLowerCase());
             nouns.push($("#data2").val().toLowerCase());
             nouns.push($("#data3").val().toLowerCase());
             triggerNextInput("adjectives");
         }else if(stage == 1){
+            $("#pl2").addClass("previewAnimOut");
+            $("#pl3").addClass("previewAnimIn");
             adjectives.push($("#data1").val().toLowerCase());
             adjectives.push($("#data2").val().toLowerCase());
             adjectives.push($("#data3").val().toLowerCase());
             triggerNextInput("verbs");
         }else if(stage == 2){
+            $("#pl3").addClass("previewAnimOut");
+            $("#pl4").addClass("previewAnimIn");
             verbs.push($("#data1").val().toLowerCase());
             verbs.push($("#data2").val().toLowerCase());
             verbs.push($("#data3").val().toLowerCase());
             triggerNextInput("adverbs");
         }else if(stage == 3){
+            $("#pl4").addClass("previewAnimOut");
+            $("#pl5").addClass("previewAnimIn");
             adverbs.push($("#data1").val().toLowerCase());
             adverbs.push($("#data2").val().toLowerCase());
             adverbs.push($("#data3").val().toLowerCase());
@@ -134,7 +143,7 @@ function triggerNextInput(type){
     canGoNext = false;
     $("input").animate({
         'opacity': '0' 
-    }, 500, function(){
+    }, 300, function(){
         $("#data1").val("")
         $("#data2").val("")
         $("#data3").val("")
@@ -142,17 +151,18 @@ function triggerNextInput(type){
     
     $("input").animate({
         'opacity': '1'
-    }, 500);
+    }, 300);
     
     $("#instruction").animate({
         'opacity': '0'
-    }, 500, function(){
+    }, 300, function(){
         $("#instruction").text("Choose 3 " + type);
+        $("#data1").focus();
     });
     
     $("#instruction").animate({
         opacity: 1
-    }, 500, function(){
+    }, 300, function(){
         canGoNext = true;
     });
     
@@ -160,16 +170,51 @@ function triggerNextInput(type){
 }
 
 function finishInput(){
-    fullPoem = "";
-    for(var i = 0; i < 100; i++){
-        fullPoem = fullPoem + nouns[i%3] + " ";
-        fullPoem = fullPoem + adjectives[i%3] + " ";
-        fullPoem = fullPoem + verbs[i%3] + " ";
-        fullPoem = fullPoem + adverbs[i%3] + " ";
-        fullPoem = fullPoem + prepositions[i%3] + " ";
-        fullPoem = fullPoem + " and then ";
+    
+    var fullPoem = `Where the dove loves to 3, so 4 and so 4, A 2 1 tends to 3, 4 5 a 1; Why the difference, you may ask? The answer lies 5 the 2 book, the one made to 3; A 2 truth that may never fall 5 a 1`;
+    
+    var order = "012";
+    var orders = [];
+    var counters = [0, 0, 0, 0, 0];
+    var indexes = [];
+    var values = [];
+    var offset = 0;
+    
+    for(var i = 0; i < 5; i++){
+        orders.push(order.split('').sort(function(){return 0.5-Math.random()}).join(''));
     }
     
+    for(var i = 0; i < fullPoem.length; i++){
+        if(!isNaN(parseInt(fullPoem.charAt(i), 10))){
+            indexes.push(i);
+            values.push(parseInt(fullPoem.charAt(i), 10));
+        }
+    }
+    for(var i = 0; i < 15; i++){
+        if(values[i] == 1){
+            var word = nouns[parseInt(orders[values[i] - 1].charAt(counters[values[i]-1]), 10)];
+            fullPoem = replaceAt(fullPoem, indexes[i] + offset, word);
+            offset += word.length - 1;
+        }else if(values[i] == 2){
+            var word = adjectives[parseInt(orders[values[i] - 1].charAt(counters[values[i]-1]), 10)];
+            fullPoem = replaceAt(fullPoem, indexes[i] + offset, word);
+            offset += word.length - 1;
+        }else if(values[i] == 3){
+            var word = verbs[parseInt(orders[values[i] - 1].charAt(counters[values[i]-1]), 10)];
+            fullPoem = replaceAt(fullPoem, indexes[i] + offset, word);
+            offset += word.length - 1;
+        }else if(values[i] == 4){
+            var word = adverbs[parseInt(orders[values[i] - 1].charAt(counters[values[i]-1]), 10)];
+            fullPoem = replaceAt(fullPoem, indexes[i] + offset, word);
+            offset += word.length - 1;
+        }else{
+            var word = prepositions[parseInt(orders[values[i] - 1].charAt(counters[values[i]-1]), 10)];
+            fullPoem = replaceAt(fullPoem, indexes[i] + offset, word);
+            offset += word.length - 1;
+        }
+        counters[values[i]-1]++;
+    }
+            
     $("#poemCreator").animate({
         'opacity': '0'
     }, 500, function(){
@@ -201,7 +246,8 @@ function submitPoem(){
     var month = months[curDate.getMonth()];
     var date = curDate.getDate();
     var year = curDate.getFullYear();
-    writeUserData($("#titleInput").val(), fullPoem, month + " " + date.toString(10) + ", " + year.toString(10));
+    var thingy = "This part isn't working and I'm not sure why but let's hope it works before tomorrow ehe please"
+    writeUserData($("#titleInput").val(), thingy, month + " " + date.toString(10) + ", " + year.toString(10));
     
     $("#finalizePoem").animate({
         'opacity': '0'
@@ -212,4 +258,8 @@ function submitPoem(){
 
 function closeCreate(){
     window.location.href="index.html";
+}
+
+function replaceAt(string, index, newString) {
+  return string.substring(0, index) + newString + string.substring(index + 1);
 }

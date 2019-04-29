@@ -116,6 +116,46 @@ body{
     word-wrap: normal;
 }
 
+#previewContainer{
+    position: absolute;
+    width: 30%;
+    left: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.previewLabel{
+    width: 100%;
+    height:auto;
+    font-size: 20px;
+    margin: 2% 0 2% 0;
+    border-left: 2px solid black;
+    padding: 0 0 0 10px;
+}
+
+.previewLabel.previewAnimIn{
+    transform: translateX(20px);
+    transition: .2s ease-out;
+}
+
+.previewLabel.previewAnimOut{
+    transform: translateX(0px);
+}
+
+#nextContainer{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    left: 60%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #instruction{
     margin: 0;
     position: relative;
@@ -184,8 +224,6 @@ input:focus{
     height: 40px;
     margin: 0;
     padding: 0;
-    top: calc(50% - 40px);
-    left: calc(300px + 15%);
     cursor: pointer;
 }
 

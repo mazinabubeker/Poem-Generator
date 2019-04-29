@@ -79,6 +79,8 @@ function newPoem(){
     $("#cancelCreateTrigger").animate({
         'opacity': '1'
     }, 200);
+    
+    $("#pl1").addClass("previewAnimIn");
 }
 
 function deletePoems(){

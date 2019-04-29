@@ -53,19 +53,30 @@
         </div>
         <div id="createView">
             <div id="poemCreator">
-                <div id="instruction">Choose 3 nouns</div>
-                <div id="errorInstruction">Please use only letters</div>
-                <ul id="dataContainer">
-                    <li><input class="wordInput" spellcheck="false" type="text" id="data1"></li>
-                    <li><input class="wordInput" spellcheck="false" type="text" id="data2"></li>
-                    <li><input class="wordInput" spellcheck="false" type="text" id="data3"></li>
+                <div id="previewContainer">
+                    <div class="previewLabel" id="pl1">NOUNS</div>
+                    <div class="previewLabel" id="pl2">ADJECTIVES</div>
+                    <div class="previewLabel" id="pl3">VERBS</div>
+                    <div class="previewLabel" id="pl4">ADVERBS</div>
+                    <div class="previewLabel" id="pl5">PREPOSITIONS</div>
+                </div>
+                <div id="nextContainer">
                     <div id="nextButton" onclick="nextClick()">
                         <div id="nextBrackets">
                             [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
                         </div>
                         <div id="nextText">NEXT</div>
                     </div>
+                </div>
+                <div id="instruction">Choose 3 nouns</div>
+                <div id="errorInstruction">Please use only letters</div>
+                <ul id="dataContainer">
+                    <li><input class="wordInput" spellcheck="false" type="text" id="data1"></li>
+                    <li><input class="wordInput" spellcheck="false" type="text" id="data2"></li>
+                    <li><input class="wordInput" spellcheck="false" type="text" id="data3"></li>
+                    
                 </ul>
+                
             </div>
 
             <div id="finalizePoem">

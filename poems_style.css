@@ -100,15 +100,17 @@ body{
 .cardTitle{
 /*    background-color: rgba(255,255,255,.1);*/
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 15%;
+    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    max-width: 100%;
+    padding: 0;
+    margin: 0 5% 0 5%;
     
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     
     font-size: 18px;
     font-family: "Roboto Slab";
@@ -118,13 +120,15 @@ body{
 .cardDate{
 /*    background-color: rgba(255,255,255,.3);*/
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 10%;
     overflow: hidden;
+    margin: 0 5% 0 5%;
+    padding: 0;
     
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     
     font-size: 15px;
     font-family: "Source Sans Pro";
@@ -249,11 +253,6 @@ body{
 
 .cardTrigger:hover .card{
     transform: scale(0.95);
-}
-
-.cardTrigger:active .card{
-    width = 500px;
-    height = 500px;
 }
 
 @keyframes popIn{
