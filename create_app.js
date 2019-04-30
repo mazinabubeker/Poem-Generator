@@ -168,11 +168,13 @@ function triggerNextInput(type){
     
 }
 
-// 1 - Noun
-// 2 - Adjective
-// 3 - Verb
-// 4 - Adverb
-// 5 - Preposition
+// ooo1 - Noun
+// oo2 - Adjective
+// oo3 - Verb
+// oo4 - Adverb
+// ooo5 - Preposition
+
+//
 
 var fullPoem = "";
 var poems =[
@@ -181,17 +183,34 @@ A 2 1 tends to 3, 4 5 a 1;
 Why the difference, you may ask?
 The answer lies 5 the 2 book, the one made to 3;
 A 2 truth that may never fall 5 a 1`,
+    
 `A 2 1 likes to 3 5 everything so 4,
 while a 2 1 prefers to 3 4 5 everything instead.
 Ah, the symphony between the two; is there anything more beautiful?
 No, besides the obvious 1, that proves to be 2 at best.
 Akin to 3 so 4, a concept that is pivotal, 5 and of itself.`,
-``
+    
+`A flower grows 4 when planted 5 a 1, but will grow 2 if you 3 it up;
+In order for it to be healthy, you must 3 a 1, and place it 5 the 2 flower;
+But a truly perfect flower grows 4. How you may ask?
+Simply take a 1, 3 it with water, add some super 2 soil...
+Place this 5 the flower, and watch it grow 4. Magical.`,
+    
+`A regular sky is blue, but a 2 sky serves as a great 1;
+The regular grass is green, but 2 grass grows 4;
+I love to 3 5 nature, but I prefer to 3 5 it;
+Of course, 4 but surely, nature will find a way, regardless of how 2!
+But nature is not complete without a 1 5 a 1, allowing it to 3 4, forever.`,
+
+`Writing is an art, where you must 3 every 1 perfectly, and fit a 2 1 5 every sentence;
+You must 3 every word 4, whether it be 5 or 5 another word;
+Combining the sentences is challenging, but is proven to be 2 with the right 1.
+Writing is an art indeed, where a writer will 4 transfer his or her thoughts onto a blank piece of paper;
+What makes it beautiful is the 2 tenacity, present when the author decides to 3 4; Quite an accomplishment, indeed!`
 ];
 
 function finishInput(){
-//    fullPoem = poems[Math.floor(Math.random()*poems.length)];
-    fullPoem = poems[1];
+    fullPoem = poems[Math.floor(Math.random()*poems.length)];
     
     var order = "012";
     var orders = [];
