@@ -41,6 +41,11 @@ $(document).ready(function() {
             'pointer-events': 'none'
         });
         
+        $('#controlView').css({
+            'filter': 'blur(3px)',
+            'pointer-events': 'none'
+        });
+        
         $('#cardPreview').animate({
             'opacity': '1'
         });
@@ -50,6 +55,7 @@ $(document).ready(function() {
 function closeCardPreview(){
     $('#cardPreview').removeAttr('style');
     $('#cardView').removeAttr('style');
+    $('#controlView').removeAttr('style');
 }
 
 function pullCards(){
