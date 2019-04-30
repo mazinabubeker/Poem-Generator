@@ -183,11 +183,12 @@ body{
     height: 17%;
     overflow: hidden;
     margin: 8% 2.5% 0 2.5%;
-    
     display: flex;
+    text-overflow: ellipsis;
     justify-content: center;
     align-content: flex-end;
     text-align: center;
+    white-space: nowrap;
     
     font-size: 24px;
     font-family: "Roboto Slab";
