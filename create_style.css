@@ -208,7 +208,7 @@ input:focus{
 }
 
 #nextButton{
-    position: relative;
+    position: absolute;
     left: 72%;
     top: 48%;
     
