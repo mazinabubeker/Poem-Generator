@@ -30,7 +30,7 @@ body{
     margin: 0;
     padding: 0;
     opacity: 1;
-    display: inline;
+    display: inline-block;
 }
 
 #finalizePoem{
@@ -147,13 +147,13 @@ body{
 
 #instruction{
     margin: 0;
-    position: relative;
+    position: absolute;
     text-align: center;
-    width: auto;
+    width: 100%;
     height: auto;
     font-size: 50px;
     font-weight: 300;
-    top: 5%;
+    top: 15%;
     
     animation: fadeIn .5s;
 }
@@ -209,9 +209,8 @@ input:focus{
 
 #nextButton{
     position: absolute;
-    left: 72%;
     top: 48%;
-    
+    left: 74%;
     background-color: white;
     padding: 0;
     width: 80px;
