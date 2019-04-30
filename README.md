@@ -25,4 +25,3 @@ Enjoy!
 - This app was built mainly with desktop use in mind (not mobile)
 - No external libraries were used (e.g. Bootstrap)
 - All components and designs were made by me, so no citations are needed
-- Chrome is recommended, but not required! :)
