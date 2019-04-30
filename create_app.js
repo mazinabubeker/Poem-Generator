@@ -32,7 +32,6 @@ function start(){
         }
     });
     
-    
 }
 
 start();
@@ -169,9 +168,30 @@ function triggerNextInput(type){
     
 }
 
+// 1 - Noun
+// 2 - Adjective
+// 3 - Verb
+// 4 - Adverb
+// 5 - Preposition
+
+var fullPoem = "";
+var poems =[
+`Where the dove loves to 3, so 4 and so 4,
+A 2 1 tends to 3, 4 5 a 1;
+Why the difference, you may ask?
+The answer lies 5 the 2 book, the one made to 3;
+A 2 truth that may never fall 5 a 1`,
+`A 2 1 likes to 3 5 everything so 4,
+while a 2 1 prefers to 3 4 5 everything instead.
+Ah, the symphony between the two; is there anything more beautiful?
+No, besides the obvious 1, that proves to be 2 at best.
+Akin to 3 so 4, a concept that is pivotal, 5 and of itself.`,
+``
+];
+
 function finishInput(){
-    
-    var fullPoem = `Where the dove loves to 3, so 4 and so 4, A 2 1 tends to 3, 4 5 a 1; Why the difference, you may ask? The answer lies 5 the 2 book, the one made to 3; A 2 truth that may never fall 5 a 1`;
+//    fullPoem = poems[Math.floor(Math.random()*poems.length)];
+    fullPoem = poems[1];
     
     var order = "012";
     var orders = [];
@@ -190,7 +210,8 @@ function finishInput(){
             values.push(parseInt(fullPoem.charAt(i), 10));
         }
     }
-    for(var i = 0; i < 15; i++){
+        
+    for(var i = 0; i < values.length; i++){
         if(values[i] == 1){
             var word = nouns[parseInt(orders[values[i] - 1].charAt(counters[values[i]-1]), 10)];
             fullPoem = replaceAt(fullPoem, indexes[i] + offset, word);
@@ -214,6 +235,8 @@ function finishInput(){
         }
         counters[values[i]-1]++;
     }
+    
+    console.log(fullPoem);
             
     $("#poemCreator").animate({
         'opacity': '0'
@@ -246,8 +269,22 @@ function submitPoem(){
     var month = months[curDate.getMonth()];
     var date = curDate.getDate();
     var year = curDate.getFullYear();
-    var thingy = "This part isn't working and I'm not sure why but let's hope it works before tomorrow ehe please"
-    writeUserData($("#titleInput").val(), thingy, month + " " + date.toString(10) + ", " + year.toString(10));
+    var hourlabel = "pm";
+    var hour;
+    if(curDate.getHours() < 12){
+        hourlabel = "am";
+    }
+    if(curDate.getHours() == 0){
+        hour = 12;
+    }else{
+        hour = (curDate.getHours()%12);
+    }
+    var minute = curDate.getMinutes();
+    
+    var title = $("#titleInput").val();
+    if(title == ""){title = "Untitled"}
+    
+    writeUserData(title, fullPoem, month + " " + date.toString(10) + ", " + year.toString(10) + " at " + hour.toString(10) + ":" + minute.toString(10) + hourlabel);
     
     $("#finalizePoem").animate({
         'opacity': '0'

@@ -17,20 +17,32 @@ var months = [
 
 var cardComponent = `<div class="cardTrigger">
                         <div class="card">
-                            <div class="cardTitle"></div>
+                            <marquee behavior="scroll" direction="left" scrollamount="0" class="cardTitle"></marquee>
                             <div class="cardDate"></div>
                             <div class="cardContent"></div>
                             <div class="cardContentBlur"></div>
                         </div>
                      </div>`;
 
-//var cardComponent = `<div class="cardTrigger">
-//                        <div class="card">
-//                        </div>
-//                     </div>`;
-
 $(document).ready(function() {
     pullCards();
+    //.children('.cardTitle').attr("scrollamount", "10");
+    $('body').on('mousedown', '.cardTrigger', function(event) {
+        $(this).children('.card').children('.cardTitle').css({
+            'white-space': 'normal',
+            'height': 'auto',
+            'margin': '5%'
+        });
+        
+        $(this).children('.card').children('.cardDate').css({
+            'margin': '8% 5% 8% 5%'
+        });
+    });
+    
+    $('body').on('mouseup', '.cardTrigger', function(event) {
+        $(this).children('.card').children('.cardTitle').removeAttr('style');
+        $(this).children('.card').children('.cardDate').removeAttr('style');
+    });
 });
 
 function pullCards(){
@@ -102,11 +114,21 @@ function testPoem(){
     var date = curDate.getDate();
     var year = curDate.getFullYear();
     
+    var hourlabel = "pm";
+    var hour;
+    if(curDate.getHours() < 12){
+        hourlabel = "am";
+    }
+    if(curDate.getHours() == 0){
+        hour = 12;
+    }else{
+        hour = (curDate.getHours()%12);
+    }
+    var minute = curDate.getMinutes();
+    
     var testTitle = "Test poem " + (999 + Math.floor(Math.random()*9000)).toString(10);
-    var testDate = month + " " + date.toString(10) + ", " + year.toString(10);
-    var testPoem = `
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                `;
+    var testDate = month + " " + date.toString(10) + ", " + year.toString(10) + " at " + hour.toString(10) + ":" + minute.toString(10) + hourlabel;
+    var testPoem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`;
     database.ref('poems/' + testTitle).set({
         poem: testPoem,
         date: testDate,
@@ -115,4 +137,22 @@ function testPoem(){
     cur.children(".card").children(".cardTitle").text(testTitle);
     cur.children(".card").children(".cardDate").text(testDate);
     cur.children(".card").children(".cardContent").text(testPoem);
+}
+
+function showPoem(){
+    $("#showPoemView").css({
+        'display': 'inline'
+    });
+    $("#showPoemView").animate({
+        'opacity': '1'
+    }, 100);
+    
+    $("#controlView").css({
+        'filter': 'blur(10px)',
+        'pointer-events': 'none'
+    });
+    $("#cardView").css({
+        'filter': 'blur(10px)',
+        'pointer-events': 'none'
+    });
 }

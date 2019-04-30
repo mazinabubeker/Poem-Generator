@@ -114,6 +114,7 @@ body{
     font-size: 25px;
     border: 2px solid rgba(0,0,0,0.2);
     word-wrap: normal;
+    white-space: pre-wrap;
 }
 
 #previewContainer{
