@@ -139,7 +139,7 @@ function testPoem(){
     }
     var minute = curDate.getMinutes();
     
-    var testTitle = "Test poem " + (999 + Math.floor(Math.random()*9000)).toString(10);
+    var testTitle = "Test Poem " + (999 + Math.floor(Math.random()*9000)).toString(10);
     var testDate = month + " " + date.toString(10) + ", " + year.toString(10) + " at " + hour.toString(10) + ":" + minute.toString(10) + hourlabel;
     var testPoem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`;
     database.ref('poems/' + testTitle).set({
