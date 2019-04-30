@@ -12,10 +12,11 @@ Enjoy!
 
 ---- How to use ----
 
-- The "new" button allows you to create a new custom poem
+- The "new" button allows you to create a new custom poem (use singular base-form words!)
 - The "clear" button will clear all poems in the database, feel free to use this!
 - The "test" button will add a test poem to the database in order to save time from having to create numerous new poems
 - Pressing on a poem will expand the card to view the full poem (if necessary)
+
 
 
 ---- Some context ----
