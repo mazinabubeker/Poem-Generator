@@ -26,7 +26,6 @@ var cardComponent = `<div class="cardTrigger">
 
 $(document).ready(function() {
     pullCards();
-    //.children('.cardTitle').attr("scrollamount", "10");
     $('body').on('mousedown', '.cardTrigger', function(event) {
         $(this).children('.card').children('.cardTitle').css({
             'white-space': 'normal',
