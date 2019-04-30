@@ -26,22 +26,31 @@ var cardComponent = `<div class="cardTrigger">
 
 $(document).ready(function() {
     pullCards();
-    $('body').on('mousedown', '.cardTrigger', function(event) {
-        $(this).children('.card').children('.cardTitle').css({
-            'white-space': 'normal',
-            'height': 'auto',
-            'margin': '5%'
+    
+    $('body').on('click', '.cardTrigger', function(event) {
+        $('#cardPreviewTitle').text($(this).children('.card').children('.cardTitle').text());
+        $('#cardPreviewDate').text($(this).children('.card').children('.cardDate').text());
+        $('#cardPreviewContent').text($(this).children('.card').children('.cardContent').text());
+        
+        $('#cardPreview').css({
+            'display': 'flex'
         });
         
-        $(this).children('.card').children('.cardDate').css({
-            'margin': '8% 5% 8% 5%'
+        $('#cardView').css({
+            'filter': 'blur(3px)',
+            'pointer-events': 'none'
+        });
+        
+        $('#cardPreview').animate({
+            'opacity': '1'
         });
     });
-    $('body').on('mouseup', '.cardTrigger', function(event) {
-        $(this).children('.card').children('.cardTitle').removeAttr('style');
-        $(this).children('.card').children('.cardDate').removeAttr('style');
-    });
 });
+
+function closeCardPreview(){
+    $('#cardPreview').removeAttr('style');
+    $('#cardView').removeAttr('style');
+}
 
 function pullCards(){
     firebase.database().ref('/poems/').once('value').then(function(snapshot) {
