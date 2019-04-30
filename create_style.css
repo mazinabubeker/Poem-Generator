@@ -30,7 +30,7 @@ body{
     margin: 0;
     padding: 0;
     opacity: 1;
-    display: inline-block;
+    display: inline;
 }
 
 #finalizePoem{
@@ -208,7 +208,7 @@ input:focus{
 }
 
 #nextButton{
-    position: absolute;
+    position: fixed;
     top: 48%;
     left: 74%;
     background-color: white;
