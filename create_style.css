@@ -159,16 +159,16 @@ body{
 }
 
 #errorInstruction{
-    position: relative;
+    position: absolute;
     text-align: center;
     margin: 0;
-    width: auto;
+    width: 100%;
     height: auto;
     color: #e25134;
     opacity: 0;
     font-size: 20px;
     font-weight: 100;
-    top: 5%;
+    top: 27%;
     transform: scale(1.0);
 }
 
