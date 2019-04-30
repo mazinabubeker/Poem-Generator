@@ -224,9 +224,9 @@ input:focus{
     height: 40px;
     cursor: pointer;
     display: flex;
-    align-content: center;
     justify-content: center;
     text-align: center;
+    line-height: 250%;
     border: 1px solid dimgray;
     transition-duration: .1s;
 }
