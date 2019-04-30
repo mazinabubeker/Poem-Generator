@@ -165,7 +165,8 @@ body{
 }
 
 #cardPreview{
-    position: absolute;
+    position: fixed;
+    
     width: 700px;
     height: 350px;
     top: calc(50% - 175px);
