@@ -227,7 +227,7 @@ input:focus{
     align-content: center;
     justify-content: center;
     border: 1px solid dimgray;
-    transition-duration: .2s;
+    transition-duration: .1s;
 }
 
 #nextText{

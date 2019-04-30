@@ -17,7 +17,7 @@ var months = [
 
 var cardComponent = `<div class="cardTrigger">
                         <div class="card">
-                            <div class="cardTitle"></marquee>
+                            <div class="cardTitle"></div>
                             <div class="cardDate"></div>
                             <div class="cardContent"></div>
                             <div class="cardContentBlur"></div>
@@ -37,7 +37,6 @@ $(document).ready(function() {
             'margin': '8% 5% 8% 5%'
         });
     });
-    
     $('body').on('mouseup', '.cardTrigger', function(event) {
         $(this).children('.card').children('.cardTitle').removeAttr('style');
         $(this).children('.card').children('.cardDate').removeAttr('style');
