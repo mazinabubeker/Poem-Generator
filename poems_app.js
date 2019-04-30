@@ -17,7 +17,7 @@ var months = [
 
 var cardComponent = `<div class="cardTrigger">
                         <div class="card">
-                            <marquee behavior="scroll" direction="left" scrollamount="0" class="cardTitle"></marquee>
+                            <div class="cardTitle"></marquee>
                             <div class="cardDate"></div>
                             <div class="cardContent"></div>
                             <div class="cardContentBlur"></div>
