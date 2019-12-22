@@ -1,0 +1,14 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+#pad{
+    background: red;
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
