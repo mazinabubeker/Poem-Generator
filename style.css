@@ -5,16 +5,21 @@ html,body{
 }
 
 
-#pad{
+.pad{
     background: #98d9ab;
     width: 22%;
     height: 48%;
-    position: absolute;
-    left: 0;
-    top: 0;
     font-size: 15px;
     color: white;
     user-select: none;
+}
+
+.pad:focus{
+    background: #89c79b;
+}
+
+.pad:active{
+    background: #89c79b;
 }
 
 #group{
