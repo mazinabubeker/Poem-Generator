@@ -7,13 +7,23 @@ html,body{
 
 #pad{
     background: #98d9ab;
-    width: 50%;
-    height: 30%;
+    width: 22%;
+    height: 48%;
     position: absolute;
     left: 0;
     top: 0;
     font-size: 15px;
     color: white;
     user-select: none;
-/*    transition-duration:s;*/
+}
+
+#group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
