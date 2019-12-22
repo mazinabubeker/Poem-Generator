@@ -3,10 +3,12 @@ var instrument;
 function pressed(){
     instrument.play();
     document.getElementById('pad').style.background = "#89c79b";
+    document.getElementById('pad').innerHTML += 'P';
 }
 
 function released(){
     document.getElementById('pad').style.background = "#98d9ab";
+    document.getElementById('pad').innerHTML += 'R';
 }
 
 function setup(){
