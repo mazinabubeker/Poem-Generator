@@ -4,11 +4,12 @@ html,body{
 }
 
 #pad{
-    background: green;
+    background: #98d9ab;
     width: 50%;
     height: 30%;
     position: absolute;
     left: 0;
     top: 0;
+    
+/*    transition-duration:s;*/
 }
-
