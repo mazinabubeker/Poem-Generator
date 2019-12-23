@@ -4,18 +4,13 @@ html,body{
     user-select: none;
 }
 
-
 .pad{
     background: #98d9ab;
     width: 24%;
-    height: 46%;
+    height: 48%;
     font-size: 15px;
     color: white;
     user-select: none;
-}
-
-.pad:focus{
-    background: #89c79b;
 }
 
 .pad:active{
@@ -29,6 +24,6 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
