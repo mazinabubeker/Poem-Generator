@@ -25,7 +25,7 @@ function setup(){
         e.preventDefault();
     });
     
-    document.addEventListener('scroll', e=>{
+    window.addEventListener('scroll', e=>{
         e.preventDefault();
     });
     
