@@ -1,7 +1,8 @@
 var instruments = [];
 
-function pressed(i);
+function pressed(i){
     instruments[i].play();
+//console.log("yo");
 //    document.getElementById('pad').style.background = "#89c79b";
 }
 
