@@ -10,7 +10,7 @@ function preload(){
 
 function setup(){
     ready = true;
-    document.html.bind('touchend', function(e) {
+    window.addEventListener('touchend', function(e) {
         e.preventDefault();
         $(this).click();
     });
