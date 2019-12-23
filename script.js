@@ -12,13 +12,11 @@ function pressed(i){
 function released(i){
 //    document.getElementById('pad').style.background = "#98d9ab";
 }
-
+document.body.bind('touchmove', function(event) { event.preventDefault()});
 function setup(){
-    document.body.bind('touchmove', function(event) { event.preventDefault()});
+    
     instruments.push(loadSound('kick.wav'));
     instruments.push(loadSound('snare.wav'));
     instruments.push(loadSound('hat.wav'));
-        
-
 }
 
