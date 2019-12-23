@@ -25,8 +25,8 @@ function setup(){
         e.preventDefault();
     });
     
-    let padwidth = $('pad')[0].style.height;
-    $('pad').style.width = padwidth;
+//    let padwidth = $('pad')[0].style.height;
+//    $('pad').style.width = padwidth;
     
 //    window.addEventListener('scroll', e=>{
 //        window.scrollTo(0, 0);
