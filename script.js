@@ -15,11 +15,14 @@ function setup(){
 function pressed(i){
     if(ready){
         instruments[i].play();
+        document.getElementsByClassName('pad')[i].style.backgroundColor = "#89c79b";
     }
 }
 
 function released(i){
-    
+    if(ready){
+        document.getElementsByClassName('pad')[i].style.backgroundColor = "#98d9ab";
+    }
 }
 
 
