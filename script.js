@@ -25,6 +25,11 @@ function setup(){
         e.preventDefault();
     });
     
+    let padwidth = $('pad')[0].style.height;
+    $('pad').forEach(()=>{
+        this.style.width = padwidth;
+    });
+    
 //    window.addEventListener('scroll', e=>{
 //        window.scrollTo(0, 0);
 //    });
