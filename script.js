@@ -1,14 +1,14 @@
 var instruments = [];
 
 window.onload = e => {
-    
+    instruments.push(loadSound('kick.wav'));
+    instruments.push(loadSound('snare.wav'));
+    instruments.push(loadSound('hat.wav'));
 }
 
 function preload(){
 //    document.body.bind('touchmove', function(event) { event.preventDefault()});
-    instruments.push(loadSound('kick.wav'));
-    instruments.push(loadSound('snare.wav'));
-    instruments.push(loadSound('hat.wav'));
+    
 }
 
 function pressed(i){
