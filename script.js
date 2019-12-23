@@ -25,13 +25,13 @@ function setup(){
         e.preventDefault();
     });
     
-    window.addEventListener('scroll', e=>{
-        window.scrollTo(0, 0);
-    });
+//    window.addEventListener('scroll', e=>{
+//        window.scrollTo(0, 0);
+//    });
     
-    window.removeEventListener('scroll', e=>{
-        window.scrollTo(0, 0);
-    });
+//    window.removeEventListener('scroll', e=>{
+//        window.scrollTo(0, 0);
+//    });
     
     $('pad').addEventListener('touchstart', e=>{
         this.style.backgroundColor = "#89c79b";
