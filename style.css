@@ -2,6 +2,7 @@ html,body{
     padding: 0;
     margin: 0;
     user-select: none;
+    touch-action: manipulation;
 }
 
 .pad{
@@ -11,6 +12,7 @@ html,body{
     font-size: 15px;
     color: white;
     user-select: none;
+    touch-action: manipulation;
 }
 
 .pad:active{
@@ -26,4 +28,5 @@ html,body{
     left: 0;
     width: 80%;
     height: 100%;
+    touch-action: manipulation;
 }
