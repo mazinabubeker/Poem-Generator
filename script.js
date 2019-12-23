@@ -10,6 +10,9 @@ function preload(){
 
 function setup(){
     ready = true;
+    window.addEventListener('touchmove', e=>{
+        e.preventDefault();
+    })
 }
 
 function pressed(i){
