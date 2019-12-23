@@ -27,6 +27,7 @@ function setup(){
     
     window.addEventListener('scroll', e=>{
         e.preventDefault();
+        window.scrollTo(0, 0);
     });
     
     $('pad').addEventListener('touchstart', e=>{
