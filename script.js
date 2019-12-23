@@ -33,25 +33,28 @@ function setup(){
 //        window.scrollTo(0, 0);
 //    });
     
-    $('pad').addEventListener('touchstart', e=>{
-        this.style.backgroundColor = "#89c79b";
-    });
-    
-    $('pad').addEventListener('touchend', e=>{
-        this.style.backgroundColor = "#98d9ab";
-    });
+//    $('pad').addEventListener('touchstart', e=>{
+//        this.style.backgroundColor = "#89c79b";
+//    });
+//    
+//    $('pad').addEventListener('touchend', e=>{
+//        this.style.backgroundColor = "#98d9ab";
+//    });
 }
 
 function pressed(i){
     if(ready){
         instruments[i].play();
+        document.getElementsByClassName('pad')[i].style.backgroundColor = "#bedaed"
+        document.getElementsByClassName('pad')[i].style.borderRadius = "7px";
     }
 }
 
 function released(i){
-//    if(ready){
-//        document.getElementsByClassName('pad')[i]
-//    }
+    if(ready){
+        document.getElementsByClassName('pad')[i].style.backgroundColor = "#71bdf0"
+        document.getElementsByClassName('pad')[i].style.borderRadius = "0px";
+    }
 }
 
 
