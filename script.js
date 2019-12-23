@@ -27,10 +27,10 @@ function setup(){
     
 //    let padwidth = $('pad')[0].style.height;
 //    $('pad').style.width = padwidth;
-    document.getElementsByClassName('pad').forEach((v,i)=>{
-        document.getElementsByClassName('pad')[i].style.width = Math.floor(innerHeight/2.1).toString() + "px";
-       document.getElementsByClassName('pad')[i].style.height = Math.floor(innerHeight/2.1).toString() + "px";
-    });
+//    document.getElementsByClassName('pad').forEach((v,i)=>{
+//        document.getElementsByClassName('pad')[i].style.width = Math.floor(innerHeight/2.1).toString() + "px";
+//       document.getElementsByClassName('pad')[i].style.height = Math.floor(innerHeight/2.1).toString() + "px";
+//    });
     
 //    window.addEventListener('scroll', e=>{
 //        window.scrollTo(0, 0);
