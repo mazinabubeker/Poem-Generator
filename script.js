@@ -1,6 +1,6 @@
 var instruments = [];
 
-window.onload = ()=>{
+window.onload = e=>{
     document.body.bind('touchmove', function(event) { event.preventDefault()});
 }
 
