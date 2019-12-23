@@ -45,15 +45,13 @@ function setup(){
 function pressed(i){
     if(ready){
         instruments[i].play();
-        document.getElementsByClassName('pad')[i].style.backgroundColor = "#bedaed"
-        document.getElementsByClassName('pad')[i].style.borderRadius = "7px";
+        document.getElementsByClassName('pad')[i].classList.add('selected');
     }
 }
 
 function released(i){
     if(ready){
-        document.getElementsByClassName('pad')[i].style.backgroundColor = "#71bdf0"
-        document.getElementsByClassName('pad')[i].style.borderRadius = "0px";
+        document.getElementsByClassName('pad')[i].classList.remove('selected');
     }
 }
 

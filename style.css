@@ -13,6 +13,12 @@ html,body{
     color: white;
     user-select: none;
     transition-duration: .15s;
+    border-radius: 2px;
+}
+
+.selected{
+    background: #bedaed;
+    border-radius: 7px;
 }
 
 
