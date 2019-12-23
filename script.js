@@ -1,7 +1,6 @@
 var instruments = [];
 
 window.onload = e=>{
-    document.body.bind('touchmove', function(event) { event.preventDefault()});
 }
 
 function pressed(i){
@@ -19,5 +18,7 @@ function setup(){
     instruments.push(loadSound('kick.wav'));
     instruments.push(loadSound('snare.wav'));
     instruments.push(loadSound('hat.wav'));
+        document.body.bind('touchmove', function(event) { event.preventDefault()});
+
 }
 
