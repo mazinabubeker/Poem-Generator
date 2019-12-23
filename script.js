@@ -26,7 +26,10 @@ function setup(){
     });
     
     window.addEventListener('scroll', e=>{
-        e.preventDefault();
+        window.scrollTo(0, 0);
+    });
+    
+    window.removeEventListener('scroll', e=>{
         window.scrollTo(0, 0);
     });
     
