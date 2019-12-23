@@ -3,9 +3,9 @@ var ready;
 
 function preload(){
     ready = false;
-    instruments.push(loadSound('kick.wav'));
-    instruments.push(loadSound('snare.wav'));
-    instruments.push(loadSound('hat.wav'));
+    instruments.push(loadSound('sounds/kick.wav'));
+    instruments.push(loadSound('sounds/snare.wav'));
+    instruments.push(loadSound('sounds/hat.wav'));
 }
 
 function setup(){
