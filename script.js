@@ -10,9 +10,10 @@ function preload(){
 
 function setup(){
     ready = true;
-    window.addEventListener('touchmove', e=>{
+    document.body.bind('touchend', function(e) {
         e.preventDefault();
-    })
+        $(this).click();
+    });
 }
 
 function pressed(i){
