@@ -8,7 +8,7 @@ html,body{
 .pad{
     background: #71bdf0;
     height: 100%;
-    width: 24%;
+    padding-left: 100%;
     font-size: 15px;
     color: white;
     user-select: none;
