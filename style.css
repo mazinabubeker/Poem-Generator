@@ -12,13 +12,13 @@ html,body{
     font-size: 15px;
     color: white;
     user-select: none;
-    transition-duration: .15s;
-    border-radius: 2px;
+    transition-duration: .05s;
+    border-radius: 8px;
 }
 
 .selected{
     background: #bedaed;
-    border-radius: 7px;
+    border-radius: 20px;
 }
 
 
